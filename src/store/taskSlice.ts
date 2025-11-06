@@ -66,6 +66,3 @@ export const completeCount = (state: RootState) => state.taskList.list.filter(x 
 export const incompleteCount = (state: RootState) => state.taskList.list.filter(x => !x.done).length;
 
 export const getNotification = (state: RootState) => state.taskList.notification;
-
-export const getNotification = (state: RootState) =>
-  state.taskList.notification
