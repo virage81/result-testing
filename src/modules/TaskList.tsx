@@ -1,23 +1,25 @@
-import { useDispatch, useSelector } from "react-redux";
-import { Empty } from "src/components/Empty";
-import { List } from "src/components/List";
-import { deleteTask, tasksSelector, toggleTask } from "src/store/taskSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import { Empty } from 'src/components/Empty';
+import { Filter } from 'src/components/Filter';
+import { List } from 'src/components/List';
+import { deleteTask, filteredTasksSelector, toggleTask } from 'src/store/taskSlice';
 
 export const TaskList = () => {
-  const items = useSelector(tasksSelector);
-  const dispatch = useDispatch();
+	const items = useSelector(filteredTasksSelector);
+	const dispatch = useDispatch();
 
-  const handleDelete = (id: Task["id"]) => {
-    dispatch(deleteTask(id));
-  };
+	const handleDelete = (id: Task['id']) => {
+		dispatch(deleteTask(id));
+	};
 
-  const handleToggle = (id: Task["id"]) => {
-    dispatch(toggleTask(id));
-  };
+	const handleToggle = (id: Task['id']) => {
+		dispatch(toggleTask(id));
+	};
 
-  return items.length > 0 ? (
-    <List items={items} onDelete={handleDelete} onToggle={handleToggle} />
-  ) : (
-    <Empty />
-  );
+	return (
+		<>
+			<Filter />
+			{items.length > 0 ? <List items={items} onDelete={handleDelete} onToggle={handleToggle} /> : <Empty />}
+		</>
+	);
 };
