@@ -12,7 +12,7 @@ export const Filter = () => {
 	};
 
 	return (
-		<select name='filter-list' defaultValue={undefined} onChange={handleChange}>
+		<select name='filter-list' defaultValue={'all'} onChange={handleChange}>
 			<option value='all'>All</option>
 			<option value='true'>Done</option>
 			<option value='false'>Not done</option>
