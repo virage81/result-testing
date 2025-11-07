@@ -34,7 +34,7 @@ test('отображение списка задач', () => {
 	expect(firstRender).toMatchDiffSnapshot(secondRender);
 });
 
-test.only('Список содержит не больше 10 невыполненных задач', () => {
+test('Список содержит не больше 10 невыполненных задач', () => {
 	const onDelete = jest.fn();
 	const onToggle = jest.fn();
 
