@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Элемент списка задач название не должно быть пустым 1`] = `
+<DocumentFragment>
+  <li
+    class="item-wrapper"
+  >
+    <input
+      checked=""
+      id="123"
+      type="checkbox"
+    />
+    <label
+      aria-label="task-name"
+      for="123"
+    >
+      <s>
+        Задача №1
+      </s>
+    </label>
+    <button
+      class="button button-with-icon"
+      data-alt="Удалить"
+    >
+      <img
+        alt="Удалить"
+        src="[object Object]"
+      />
+    </button>
+  </li>
+</DocumentFragment>
+`;
